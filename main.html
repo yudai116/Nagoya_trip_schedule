@@ -9,20 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f5f2ed;--bg2:#ffffff;--bg3:#edeae4;
-  --ink:#1c1a17;--ink2:#3d3a34;--muted:#7a7265;--faint:#b0a898;--border:#ddd8cf;
-  --gold:#8a6d2f;--gold2:#c4a24a;--gold3:#f0e4c0;
-  --red:#8b2e20;--red2:#c4442e;--red3:#fdecea;
-  --blue:#1e3d6e;--blue2:#2e5fa8;--blue3:#e8f0fb;
-  --sage:#2d5c3e;--sage2:#d6ead9;
-  --amber:#7a5500;--amber2:#fff4d6;
+  --bg:#111009;--bg2:#1a1814;--bg3:#222018;
+  --ink:#f0ece4;--ink2:#d8d4cc;--muted:#9a9080;--faint:#8a8278;--border:#2e2c28;
+  --gold:#c4a24a;--gold2:#e0bc60;--gold3:#3a3020;
+  --red:#e05545;--red2:#f87171;--red3:#2a1010;
+  --blue:#5a9af0;--blue2:#93bbf7;--blue3:#0e1a30;
+  --sage:#4aaa6a;--sage2:#0e2818;
+  --amber:#e8c040;--amber2:#2a2000;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',sans-serif;font-weight:300;min-height:100vh;overflow-x:hidden;line-height:1.6;}
+body{background:#111009;color:#e8e4dc;font-family:'Noto Sans JP',sans-serif;font-weight:300;min-height:100vh;overflow-x:hidden;line-height:1.6;}
 
 /* HERO */
-.hero{background:var(–ink);min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:60px 24px 68px;text-align:center;}
+.hero{background:#0d0c0a;min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:60px 24px 68px;text-align:center;}
 .hero::after{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 15% 85%,rgba(196,162,74,.12) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 85% 15%,rgba(46,95,168,.1) 0%,transparent 50%);pointer-events:none;}
 .hero-inner{position:relative;z-index:1;max-width:900px;}
 .hero-eyebrow{font-size:10px;font-weight:400;letter-spacing:.45em;color:var(–gold2);text-transform:uppercase;margin-bottom:18px;display:block;opacity:0;animation:fadeUp .7s ease .1s forwards;}
@@ -31,6 +31,7 @@ body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',sans-serif
 .hero-date{font-family:‘Cormorant Garamond’,serif;font-size:clamp(14px,2.5vw,19px);font-weight:300;color:rgba(255,255,255,.4);letter-spacing:.18em;margin-bottom:36px;opacity:0;animation:fadeUp .7s ease .4s forwards;}
 .hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;opacity:0;animation:fadeUp .7s ease .55s forwards;}
 .hero-badge{font-size:11px;font-weight:400;letter-spacing:.06em;padding:5px 13px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);border-radius:20px;}
+.hero-bday{font-family:‘Cormorant Garamond’,serif;font-size:clamp(13px,2.2vw,18px);font-weight:300;color:rgba(196,162,74,.6);letter-spacing:.12em;margin-bottom:32px;margin-top:-18px;opacity:0;animation:fadeUp .7s ease .42s forwards;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 
 /* NAV */
@@ -67,7 +68,7 @@ main{max-width:1100px;margin:0 auto;padding:0 24px 80px;}
 .tl-body{padding:15px 0 15px 22px;border-bottom:1px solid var(–border);}
 .tl-item:last-child .tl-body{border-bottom:none;}
 .tl-cat{font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-bottom:4px;}
-.cat-move{color:var(–faint);}.cat-food{color:var(–red);}.cat-spot{color:var(–blue);}.cat-hotel{color:var(–sage);}.cat-tower{color:var(–amber);}
+.cat-move{color:#8a8278;}.cat-food{color:var(–red);}.cat-spot{color:var(–blue);}.cat-hotel{color:var(–sage);}.cat-tower{color:var(–amber);}
 .tl-name{font-family:‘Noto Serif JP’,serif;font-size:14.5px;font-weight:400;color:var(–ink);margin-bottom:4px;line-height:1.5;}
 .tl-item.hl-gold .tl-name{color:var(–gold);font-size:15.5px;font-weight:600;}
 .tl-item.hl-red  .tl-name{color:var(–red);font-size:15.5px;font-weight:600;}
@@ -76,25 +77,25 @@ main{max-width:1100px;margin:0 auto;padding:0 24px 80px;}
 .tl-desc strong{color:var(–ink2);font-weight:500;}
 .tl-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px;}
 .tl-tag{font-size:10px;font-weight:500;letter-spacing:.06em;padding:3px 10px;border-radius:3px;}
-.tag-warn{background:var(–amber2);color:var(–amber);border:1px solid #e8d080;}
-.tag-ok{background:var(–sage2);color:var(–sage);border:1px solid #a8d4b0;}
-.tag-info{background:var(–blue3);color:var(–blue);border:1px solid #a8c4f0;}
-.tag-res{background:var(–gold3);color:var(–gold);border:1px solid #d4b870;}
+.tag-warn{background:#2a1e00;color:#e8c040;border:1px solid #5a4800;}
+.tag-ok{background:#0e1e0e;color:#4aaa6a;border:1px solid #1e4a2e;}
+.tag-info{background:#0e1828;color:#93bbf7;border:1px solid #1e3a60;}
+.tag-res{background:#2a2010;color:#e0bc60;border:1px solid #5a4820;}
 
 /* MAP */
-.map-wrap{margin:28px 0;border:1px solid var(–border);border-radius:6px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);}
-.map-head{background:var(–bg3);padding:11px 18px;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(–muted);border-bottom:1px solid var(–border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;}
+.map-wrap{margin:28px 0;border:1px solid #2e2c28;border-radius:6px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.4);}
+.map-head{background:#1e1c19;padding:11px 18px;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#aaa;border-bottom:1px solid #2e2c28;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;}
 .map-container{height:360px;}
 .map-container iframe{width:100%;height:100%;border:none;display:block;}
-.map-legend{padding:11px 18px;background:var(–bg2);display:flex;flex-wrap:wrap;gap:7px 16px;border-top:1px solid var(–border);}
+.map-legend{padding:11px 18px;background:#1a1814;display:flex;flex-wrap:wrap;gap:7px 16px;border-top:1px solid #2e2c28;}
 .leg-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(–ink2);}
 .leg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
 
 /* NOTICE */
-.notice{border-left:3px solid var(–gold2);background:var(–gold3);padding:12px 16px;margin:16px 0;font-size:12px;line-height:1.8;color:var(–ink2);border-radius:0 4px 4px 0;}
+.notice{border-left:3px solid var(–gold2);background:#2a2010;padding:12px 16px;margin:16px 0;font-size:12px;line-height:1.8;color:#d8d4cc;border-radius:0 4px 4px 0;}
 .notice strong{color:var(–ink);font-weight:500;}
 .notice-title{font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(–gold);margin-bottom:4px;}
-.notice.blue{border-left-color:var(–blue2);background:var(–blue3);}
+.notice.blue{border-left-color:var(–blue2);background:#0e1828;}
 .notice.blue .notice-title{color:var(–blue);}
 
 /* CARDS */
@@ -103,13 +104,13 @@ main{max-width:1100px;margin:0 auto;padding:0 24px 80px;}
 .card-title{font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(–gold);margin-bottom:9px;padding-bottom:8px;border-bottom:1px solid var(–border);}
 .card-body{font-size:12px;line-height:1.9;color:var(–ink2);}
 .card-body strong{color:var(–ink2);font-weight:500;}
-.card-body a{color:var(–blue2);font-size:11px;text-decoration:none;}
+.card-body a{color:#93bbf7;font-size:11px;text-decoration:none;}
 .card-body a:hover{text-decoration:underline;}
 
 /* CHECKLIST */
-.checklist-wrap{background:var(–bg2);border:1px solid var(–border);border-radius:6px;overflow:hidden;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);}
-.checklist-head{background:var(–bg3);padding:11px 18px;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(–ink2);border-bottom:1px solid var(–border);}
-.checklist-item{display:flex;gap:13px;padding:12px 18px;border-bottom:1px solid var(–border);align-items:flex-start;font-size:12px;color:var(–ink2);line-height:1.7;}
+.checklist-wrap{background:#1e1c19;border:1px solid #2e2c28;border-radius:6px;overflow:hidden;margin:14px 0;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.checklist-head{background:#222018;padding:11px 18px;font-size:11px;font-weight:700;letter-spacing:.1em;color:#d8d4cc;border-bottom:1px solid #2e2c28;}
+.checklist-item{display:flex;gap:13px;padding:12px 18px;border-bottom:1px solid #2e2c28;align-items:flex-start;font-size:12px;color:#d8d4cc;line-height:1.7;}
 .checklist-item:last-child{border-bottom:none;}
 .check-box{width:17px;height:17px;border:2px solid var(–border);border-radius:3px;flex-shrink:0;margin-top:1px;cursor:pointer;transition:all .2s;position:relative;}
 .check-box:hover{border-color:var(–gold2);}
@@ -162,97 +163,6 @@ footer{background:var(–ink);text-align:center;padding:26px 20px;font-size:10px
 .day-num-large{font-size:70px;}.map-container{height:240px;}
 }
 
-/* ===== 全文字色 白系強制（ダークモード対応） ===== */
-body{color:#e8e4dc !important;}
-/* NAV */
-.nav{background:#1a1814 !important;border-bottom-color:#333 !important;}
-.nav-tab{color:#ccc !important;}
-.nav-tab:hover{color:#f0c040 !important;}
-.nav-tab.active{color:#f0c040 !important;border-bottom-color:#f0c040 !important;}
-/* DAY HEADER */
-.day-num-large{color:rgba(255,255,255,0.06) !important;}
-.day-tag{color:#f0c040 !important;}
-.day-title-text{color:#fff !important;}
-.day-title-text em{color:#f0c040 !important;}
-/* TIMELINE */
-.tl-time{color:#aaa !important;}
-.tl-time::after{background:#2a2620 !important;border-color:#555 !important;}
-.tl-body{border-bottom-color:#333 !important;}
-.tl-name{color:#f0ece4 !important;}
-.tl-item.hl-gold .tl-name{color:#f0c040 !important;}
-.tl-item.hl-red  .tl-name{color:#f87171 !important;}
-.tl-item.hl-blue .tl-name{color:#93bbf7 !important;}
-.tl-desc{color:#ccc !important;}
-.tl-desc strong{color:#eee !important;}
-.tl-cat{color:#aaa !important;}
-.cat-food{color:#f87171 !important;}
-.cat-spot{color:#93bbf7 !important;}
-.cat-hotel{color:#86efac !important;}
-.cat-tower{color:#fcd34d !important;}
-/* CARDS */
-.card{background:#1e1c19 !important;border-color:#333 !important;}
-.card-title{color:#f0c040 !important;}
-.card-body{color:#ccc !important;}
-.card-body strong{color:#eee !important;}
-.card-body a{color:#93bbf7 !important;}
-/* TAGS */
-.tag-warn{background:rgba(122,85,0,.35) !important;color:#fcd34d !important;border-color:#7a5500 !important;}
-.tag-ok{background:rgba(45,92,62,.35) !important;color:#86efac !important;border-color:#2d5c3e !important;}
-.tag-info{background:rgba(30,61,110,.35) !important;color:#93bbf7 !important;border-color:#1e3d6e !important;}
-/* LEGEND */
-.leg-item{color:#ccc !important;}
-.map-legend{background:#1e1c19 !important;border-color:#333 !important;}
-/* SECTION LABEL */
-.section-label,.section-eyebrow{color:#f0c040 !important;}
-/* HL ROWS */
-.tl-item.hl-gold .tl-body{background:rgba(200,155,40,.1) !important;}
-.tl-item.hl-red  .tl-body{background:rgba(200,50,30,.1) !important;}
-.tl-item.hl-blue .tl-body{background:rgba(30,80,180,.1) !important;}
-/* TIMELINE LINE */
-.timeline::before{background:#333 !important;}
-/* GHIBLI SECTION */
-.ghibli-integration{background:#181610 !important;}
-.ghibli-integration .hdr h1{color:#fff !important;}
-.ghibli-integration .hdr-sub{color:rgba(255,255,255,.85) !important;}
-.ghibli-integration .chip{color:#fff !important;border-color:rgba(255,255,255,.3) !important;}
-.ghibli-integration .card{background:#1e1c19 !important;border-color:#333 !important;}
-.ghibli-integration .card-head{color:#fff !important;}
-.ghibli-integration .card-body{color:#ccc !important;background:#1e1c19 !important;}
-.ghibli-integration .move-item{background:#252320 !important;color:#ddd !important;}
-.ghibli-integration .move-from,.ghibli-integration .move-to{color:#fff !important;}
-.ghibli-integration .move-info{color:#bbb !important;}
-.ghibli-integration .move-arrow{color:#888 !important;}
-.ghibli-integration .sch-time{color:#aaa !important;}
-.ghibli-integration .sch-content{color:#ddd !important;}
-.ghibli-integration .sch-badge{color:#fff !important;}
-.ghibli-integration .sch-spots{color:#bbb !important;}
-.ghibli-integration .sch-row{border-bottom-color:#333 !important;}
-.ghibli-integration .acard-head{color:#fff !important;}
-.ghibli-integration .acard-body{background:#252320 !important;color:#ddd !important;}
-.ghibli-integration .acard-body li{color:#ccc !important;}
-.ghibli-integration .acard-stay{color:#fff !important;}
-.ghibli-integration .note-box{background:rgba(255,251,200,.08) !important;color:#f0e6b0 !important;border-left-color:#f0c040 !important;}
-.ghibli-integration .note-box strong{color:#f0c040 !important;}
-.ghibli-integration .legend{background:#252320 !important;border-top-color:#333 !important;}
-.ghibli-integration .leg{color:#ccc !important;}
-.ghibli-integration .leg-dot{border-color:#444 !important;}
-.ghibli-integration table td,.ghibli-integration table th{color:#ccc !important;border-color:#333 !important;}
-.ghibli-integration table tr{background:transparent !important;}
-.ghibli-integration table tr:first-child{background:#2a2620 !important;}
-.ghibli-integration table tr:last-child td{color:#f87171 !important;font-weight:700 !important;}
-/* TOOLTIP（白背景のまま維持） */
-.tt{background:#fff !important;}
-.tt-head{color:#fff !important;}
-.tt-body{color:#222 !important;}
-.tt-spot-t{color:#555 !important;}
-.tt-spots h4{color:#666 !important;}
-.tt-note{color:#444 !important;background:#fffbe6 !important;}
-.tt-time{color:#333 !important;background:#f0f0f0 !important;}
-/* MAIN BG */
-main{background:transparent !important;}
-.day-section{background:transparent !important;}
-.footer{color:#666 !important;}
-
 </style>
 
 </head>
@@ -263,6 +173,7 @@ main{background:transparent !important;}
     <span class="hero-eyebrow">2026 Spring Trip</span>
     <h1 class="hero-title"><em>名古屋</em><br>旅行</h1>
     <p class="hero-date">May 14 — 16, 2026</p>
+    <p class="hero-bday">なみちゃん &nbsp;𝐇𝐚𝐩𝐩𝐲 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 🎂</p>
     <div class="hero-badges">
       <span class="hero-badge">🌲 ジブリパーク</span>
       <span class="hero-badge">🍱 ひつまぶし</span>
@@ -330,40 +241,83 @@ main{background:transparent !important;}
     </div>
   </div>
 
-  <div class="map-wrap">
-    <div class="map-head"><span>📍 Day 1 ルートマップ</span><span>名古屋駅 → ジブリパーク → ホテル（金山）</span></div>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&origin=place_id:ChIJ7cv00DwsDogRAMDACa2m4K8&destination=place_id:ChIJK6iqQlJ3A2ARQfVkGj06ljk&waypoints=place_id:ChIJs9ADAkVnA2ARixLFaXpLFjY&mode=driving&language=ja" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="map-legend">
-      <div class="leg-item"><div class="leg-dot" style="background:#2e5fa8"></div>名古屋駅（JPタワー）</div>
-      <div class="leg-item"><div class="leg-dot" style="background:#2d5c3e"></div>ジブリパーク（長久手）</div>
-      <div class="leg-item"><div class="leg-dot" style="background:#7a5500"></div>ホテル（金山）</div>
-    </div>
+  <div class="map-wrap route-map-wrap">
+  <div class="map-head">
+    <span>📍 Day 1 移動ルート</span>
+    <span style="font-size:10px;opacity:.7">品川 → 名古屋 → ジブリパーク → 金山（ホテル）</span>
+  </div>
+  <div class="route-map" style="padding:16px 12px 0;background:#161412;overflow-x:auto;">
+  <svg viewBox="0 0 1120 270" style="width:100%;min-width:480px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+    <defs><marker id="arr4" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4z" fill="#c4a24a"/></marker></defs>
+
+```
+<circle cx="95" cy="130" r="55" fill="#8a6d2f" stroke="#fcd34d" stroke-width="3"/>
+<text x="95" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">名古屋駅</text>
+<text x="95" y="140" text-anchor="middle" font-size="12" fill="#eee">08:10 着</text>
+<text x="95" y="46" text-anchor="middle" font-size="11" fill="#fcd34d">Times Car 受取</text>
+<text x="95" y="244" text-anchor="middle" font-size="11" fill="#999">レンタカー出発</text>
+<circle cx="405" cy="130" r="55" fill="#2d5a27" stroke="#4ade80" stroke-width="3"/>
+<text x="405" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">ジブリパーク</text>
+<text x="405" y="140" text-anchor="middle" font-size="12" fill="#eee">10:00〜17:00</text>
+<text x="405" y="46" text-anchor="middle" font-size="11" fill="#4ade80">愛知県長久手市</text>
+<text x="405" y="244" text-anchor="middle" font-size="11" fill="#999">大さんぽ券</text>
+<circle cx="715" cy="130" r="55" fill="#4a1d96" stroke="#a78bfa" stroke-width="3"/>
+<text x="715" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">ANA Crowne</text>
+<text x="715" y="140" text-anchor="middle" font-size="12" fill="#eee">Plaza 18:30</text>
+<text x="715" y="46" text-anchor="middle" font-size="11" fill="#a78bfa">チェックイン</text>
+<text x="715" y="244" text-anchor="middle" font-size="11" fill="#999">金山駅 徒歩1分</text>
+<circle cx="1025" cy="130" r="55" fill="#7a2020" stroke="#f87171" stroke-width="3"/>
+<text x="1025" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">ひとはし</text>
+<text x="1025" y="140" text-anchor="middle" font-size="12" fill="#eee">19:00〜 夕食</text>
+<text x="1025" y="46" text-anchor="middle" font-size="11" fill="#f87171">新和食・個室</text>
+<text x="1025" y="244" text-anchor="middle" font-size="11" fill="#999">名古屋駅 徒歩3分</text>
+
+<line x1="154" y1="130" x2="342" y2="130" stroke="#c4a24a" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr4)"/>
+<rect x="198" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#c4a24a" stroke-width="1.5"/>
+<text x="248" y="125" text-anchor="middle" font-size="13" fill="#c4a24a" font-weight="700">🚗 約50分</text>
+<text x="248" y="143" text-anchor="middle" font-size="11" fill="#bbb">約38km</text>
+<line x1="464" y1="130" x2="652" y2="130" stroke="#c4a24a" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr4)"/>
+<rect x="508" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#c4a24a" stroke-width="1.5"/>
+<text x="558" y="125" text-anchor="middle" font-size="13" fill="#c4a24a" font-weight="700">🚗 約50分</text>
+<text x="558" y="143" text-anchor="middle" font-size="11" fill="#bbb">約37km</text>
+<line x1="774" y1="130" x2="962" y2="130" stroke="#c4a24a" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr4)"/>
+<rect x="818" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#c4a24a" stroke-width="1.5"/>
+<text x="868" y="125" text-anchor="middle" font-size="13" fill="#c4a24a" font-weight="700">🚶 約5分</text>
+<text x="868" y="143" text-anchor="middle" font-size="11" fill="#bbb">約500m</text>
+```
+
+  </svg>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px 20px;background:#161412;border-top:1px solid #2a2820;margin-top:2px;">
+    <a href="https://www.google.com/maps/dir/名古屋駅,愛知県名古屋市中村区/ジブリパーク,愛知県長久手市茨ケ廻間乙1533/@35.163,137.0,11z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#1e4a28;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 名古屋駅 → ジブリパーク</a>
+    <a href="https://www.google.com/maps/dir/ジブリパーク,愛知県長久手市茨ケ廻間乙1533/ANA+Crowne+Plaza+Grand+Court+Nagoya,名古屋市中区金山町1-1-1/@35.157,136.97,11z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#2a1560;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 ジブリパーク → ホテル</a>
+    <a href="https://www.google.com/maps/dir/ANA+Crowne+Plaza+Grand+Court+Nagoya,名古屋市中区金山町1-1-1/新和食+ひとはし,名古屋市中村区/@35.168,136.885,15z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#4a1010;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 ホテル → ひとはし</a>
+</div>
+</div>
   </div>
 
   <!-- INTEGRATED GHIBLI DETAIL -->
 
-<div class="ghibli-integration">
 <style>
 
 .ghibli-integration{
-–forest:#2d5a27;–forest2:#4a7c3f;–leaf:#7ab648;
-–cream:#faf6ed;–warm:#fff9f0;–gold:#d97706;
-–majo:#7c3aed;–majo2:#a78bfa;–majo3:#ede9fe;
-–souko:#c2410c;–souko2:#fb923c;–souko3:#fff7ed;
-–mono:#15803d;–mono2:#4ade80;–mono3:#f0fdf4;
-–dondo:#1d4ed8;–dondo2:#60a5fa;–dondo3:#eff6ff;
-–gray:#6b7280;–shadow:rgba(0,0,0,0.13);
+  --forest:#2d5a27;--forest2:#4a7c3f;--leaf:#7ab648;
+  --cream:#181614;--warm:#1e1c18;--gray:#9a9080;--shadow:rgba(0,0,0,0.5);--gold:#d97706;
+  --majo:#7c3aed;--majo2:#a78bfa;--majo3:#2d1a5a;
+  --souko:#ea580c;--souko2:#fb923c;--souko3:#3a1800;
+  --mono:#16a34a;--mono2:#4ade80;--mono3:#0a2010;
+  --dondo:#2563eb;--dondo2:#60a5fa;--dondo3:#0a1840;
+  --gray:#6b7280;--shadow:rgba(0,0,0,0.13);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 
+
 /* HEADER */
 .hdr{
-background:linear-gradient(135deg,var(–forest) 0%,var(–forest2) 60%,#3d6b32 100%);
+background:linear-gradient(135deg,var(--forest) 0%,var(--forest2) 60%,#3d6b32 100%);
 padding:18px 16px 14px;text-align:center;position:relative;overflow:hidden
 }
-.hdr::after{content:’’;position:absolute;inset:0;
+.hdr::after{content:'';position:absolute;inset:0;
 background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.06) 0%,transparent 60%);
 pointer-events:none}
 .hdr h1{font-size:20px;font-weight:700;color:#fff;letter-spacing:.06em;text-shadow:0 2px 6px rgba(0,0,0,.3);position:relative}
@@ -376,7 +330,7 @@ font-size:10px;padding:3px 10px;border-radius:20px;letter-spacing:.04em}
 .wrap{max-width:1100px;margin:0 auto;padding:14px 20px 30px}
 
 /* SECTION CARD */
-.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 16px var(–shadow);margin-bottom:14px}
+.card{background:#1e1c19;border-radius:14px;overflow:hidden;box-shadow:0 3px 16px var(--shadow);margin-bottom:14px;border:1px solid #2e2c28;}
 .card-head{padding:9px 14px;display:flex;align-items:center;gap:7px;font-weight:700;font-size:13px;color:#fff}
 
 /* ===================== MAP ===================== */
@@ -404,89 +358,123 @@ animation:ttIn .2s ease
 .tt-spots h4{font-size:10px;color:#444;letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px}
 .tt-spot{display:flex;gap:6px;padding:3px 0;border-bottom:1px solid #f5f5f5;align-items:flex-start}
 .tt-spot-t{min-width:38px;font-size:10px;font-weight:700;color:#555;padding-top:1px}
-.tt-note{background:#fffbe6;border-left:2px solid var(–gold);padding:6px 8px;border-radius:0 6px 6px 0;font-size:10px;line-height:1.6;color:#555;margin-top:8px}
+.tt-note{background:#fffbe6;border-left:2px solid #d97706;padding:6px 8px;border-radius:0 6px 6px 0;font-size:10px;line-height:1.6;color:#444;margin-top:8px}
 
 /* LEGEND */
-.legend{padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;background:var(–warm);border-top:1px solid #f0ebe0}
-.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:#222}
+.legend{padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;background:#1e1c18;border-top:1px solid #2e2c28}
+.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:#ccc}
 .leg-dot{width:13px;height:13px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.2);
 font-size:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;flex-shrink:0}
 
 /* ===================== MOVE DIAGRAM ===================== */
 .move-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px}
 @media(max-width:500px){.move-grid{grid-template-columns:1fr}}
-.move-item{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#f0f0f0;border-radius:10px;font-size:12px;color:#222}
+.move-item{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#252320;border-radius:10px;font-size:12px;color:#ddd}
 .move-from,.move-to{font-weight:700;font-size:11px;padding:3px 8px;border-radius:8px;color:#fff;white-space:nowrap}
 .move-mid{display:flex;flex-direction:column;align-items:center;flex:1;min-width:0}
-.move-arrow{color:#555;font-size:16px;line-height:1}
-.move-info{font-size:10px;color:#333;text-align:center;font-weight:600;white-space:nowrap}
+.move-arrow{color:#888;font-size:16px;line-height:1}
+.move-info{font-size:10px;color:#bbb;text-align:center;font-weight:600;white-space:nowrap}
 
 /* ===================== SCHEDULE ===================== */
-.sch-row{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid #f0ebe0;align-items:flex-start;font-size:12px}
-.sch-time{min-width:48px;font-weight:700;font-size:11px;color:#333;padding-top:2px;flex-shrink:0}
+.sch-row{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid #2e2c28;align-items:flex-start;font-size:12px;color:#ccc}
+.sch-time{min-width:48px;font-weight:700;font-size:11px;color:#bbb;padding-top:2px;flex-shrink:0}
 .sch-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:12px;font-size:10px;font-weight:700;color:#fff;margin-right:5px;white-space:nowrap;flex-shrink:0}
-.sch-content{line-height:1.5;color:#1a1a1a}
-.sch-spots{margin-top:4px;padding-left:4px;font-size:11px;color:#444;line-height:1.6}
+.sch-content{line-height:1.5;color:#ddd}
+.sch-spots{margin-top:4px;padding-left:4px;font-size:11px;color:#bbb;line-height:1.6}
 .sch-spots li{list-style:none;padding-left:12px;position:relative}
-.sch-spots li::before{content:’›’;position:absolute;left:0;color:#999}
+.sch-spots li::before{content:'›';position:absolute;left:0;color:#999}
 
 /* AREA INFO CARDS */
 .area-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
 @media(max-width:560px){.area-cards{grid-template-columns:1fr}}
-.acard{border-radius:12px;overflow:hidden;box-shadow:0 2px 10px var(–shadow)}
-.acard-head{padding:8px 12px;font-size:12px;font-weight:700;color:#fff}
-.acard-body{padding:10px 12px;font-size:12px;line-height:1.9;color:#333}
+.acard{border-radius:12px;overflow:hidden;box-shadow:0 2px 10px var(--shadow)}
+.acard-head{padding:8px 12px;font-size:12px;font-weight:700;color:#fff;font-weight:700}
+.acard-body{padding:10px 12px;font-size:12px;line-height:1.9;color:#ddd}
 .acard-body ul{list-style:none;padding:0}
 .acard-body li{padding-left:14px;position:relative}
-.acard-body li::before{content:‘🔸’;position:absolute;left:0;font-size:9px;top:2px}
+.acard-body li::before{content:'🔸';position:absolute;left:0;font-size:9px;top:2px}
 .acard-stay{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;color:#fff;margin-bottom:6px}
 
 /* NOTE BOX */
-.note-box{padding:10px 12px;background:#fffbe6;border-left:3px solid var(–gold);border-radius:0 8px 8px 0;font-size:11px;line-height:1.7;color:#333;margin-top:10px}
+.note-box{padding:10px 12px;background:#fffbe6;border-left:3px solid #d97706;border-radius:0 8px 8px 0;font-size:11px;line-height:1.7;color:#1a1208;margin-top:10px}
+.note-box strong{color:#7a3a00 !important;}
 .note-box strong{color:#c05621}
 
 /* FOOTER */
-.footer{text-align:center;font-size:10px;color:#aaa;padding-bottom:12px}
-.ghibli-integration .card-body{color:#333}
+.footer{text-align:center;font-size:10px;color:#555;padding-bottom:12px}
+.ghibli-integration .card-body{color:#e8e4dc}
 
 .ghibli-integration {
-–forest:#2d5a27;–forest2:#4a7c3f;–leaf:#7ab648;
-–cream:#faf6ed;–warm:#fff9f0;–gold:#d97706;
-–majo:#7c3aed;–majo2:#a78bfa;–majo3:#ede9fe;
-–souko:#c2410c;–souko2:#fb923c;–souko3:#fff7ed;
-–mono:#15803d;–mono2:#4ade80;–mono3:#f0fdf4;
-–dondo:#1d4ed8;–dondo2:#60a5fa;–dondo3:#eff6ff;
-–gray:#6b7280;–shadow:rgba(0,0,0,0.13);
-background: var(–cream);
-border-radius: 14px;
-overflow: hidden;
-margin-top: 30px;
-font-family: ‘Noto Sans JP’, sans-serif;
-color: #1a1a1a;
+  --forest:#2d5a27;--forest2:#4a7c3f;--leaf:#7ab648;
+  --cream:#181614;--warm:#1e1c18;--gray:#9a9080;--shadow:rgba(0,0,0,0.5);--gold:#d97706;
+  --majo:#7c3aed;--majo2:#a78bfa;--majo3:#2d1a5a;
+  --souko:#ea580c;--souko2:#fb923c;--souko3:#3a1800;
+  --mono:#16a34a;--mono2:#4ade80;--mono3:#0a2010;
+  --dondo:#2563eb;--dondo2:#60a5fa;--dondo3:#0a1840;
+  --gray:#6b7280;--shadow:rgba(0,0,0,0.13);
+  background: var(--cream);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 30px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color:#e0dcd4;
 }
 .ghibli-integration .hdr { margin: 0; }
 .ghibli-integration .wrap { padding: 20px; max-width: 100%; }
+
+/* ===== カラフル色味復元 ===== */
+
+/* acard-body 内の strong を明るく */
+.acard-body li strong { color: #fff; font-weight: 700; }
+.acard-body li { color: inherit; }
+
+/* acard-body: div内の warning テキスト */
+.acard-body div[style*="color:#e74c3c"] { color: #ff8080 !important; }
+.acard-body div[style*="color:#15803d"] { color: #4ade80 !important; }
+.acard-body div[style*="color:#1d4ed8"] { color: #93bbf7 !important; }
+
+/* エリアカラーの強調テキスト */
+.acard-body .acard-stay { font-weight: 700; font-size: 11px; letter-spacing: .04em; }
+
+/* スケジュール行の強調 */
+.sch-content strong { color: #fff; font-weight: 600; }
+.sch-row { color: #ccc; }
+.sch-spots li { color: #aaa; }
+.sch-spots li::before { color: #777; }
+
+/* note-box の strong はすでに設定済み */
+
+/* move-item のアロー */
+.move-arrow { color: #aaa; font-size: 18px; }
+.move-info { color: #ccc; font-weight: 700; }
+
+/* チケットテーブルの色 */
+table td, table th { color: #ddd; }
+table tr td:first-child { color: #e8e4dc; }
+table tr:last-child td { color: #fb923c !important; font-weight: 700; }
+
+/* 移動時間ラベルの文字 */
+.move-mid .move-info { color: #ddd; }
+
+/* card-head 内のspan */
+.card-head span:first-child { font-size: 16px; }
+.card-head span:last-child { color: #fff; letter-spacing: .02em; }
+
+/* sch-badge の ⭐最優先 などの強調 */
+.sch-content > span + span { color: #ddd; }
+
+/* tt (tooltip) 白背景内は暗色維持 */
+.tt .tt-body { color: #222; }
+.tt .tt-spot { color: #333; }
+
 </style>
 
 <!-- HEADER -->
 
-<div class="hdr">
-  <h1>🌿 ジブリパーク 完全ルートマップ</h1>
-  <div class="hdr-sub">5/14(水)　大さんぽ券スタンダード ＋ どんどこ森エリア券（午後）</div>
-  <div class="hdr-chips">
-    <span class="chip">平日 10:00〜17:00</span>
-    <span class="chip">西駐車場 500円</span>
-    <span class="chip">ネコバス利用あり</span>
-    <span class="chip">カップル2名</span>
-  </div>
-</div>
-
-<div class="wrap">
-
 <!-- ===================== MAP SECTION ===================== -->
 
 <div class="card">
-  <div class="card-head" style="background:linear-gradient(90deg,var(--forest),var(--forest2))">
+  <div class="card-head" style="background:linear-gradient(135deg,#2d5a27,#4a7c3f,#5a9c4f)">
     <span>🗺</span><span>エリアマップ（各エリアをタップで詳細表示）</span>
   </div>
 
@@ -608,19 +596,12 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
 <rect x="224" y="414" width="96" height="16" rx="7" fill="rgba(96,125,139,0.75)"/>
 <text x="272" y="425" text-anchor="middle" font-size="8" fill="white" font-weight="600">退場 徒歩 約20分</text>
 
-  <!-- 魔女の谷エリア内スポットラベル -->
-
-  <rect x="330" y="162" width="92" height="52" rx="7" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
-  <text x="376" y="176" text-anchor="middle" font-size="7.5" fill="#c4b5fd" font-weight="600">🏰 ハウルの城（奥）</text>
-  <text x="376" y="188" text-anchor="middle" font-size="7" fill="#c4b5fd">🧙 魔女の家</text>
-  <text x="376" y="199" text-anchor="middle" font-size="7" fill="#c4b5fd">🍞 グーチョキパン屋</text>
-  <text x="376" y="210" text-anchor="middle" font-size="7" fill="#c4b5fd">🍽 空飛ぶオーブン</text>
 </svg>
 
 <!-- TOOLTIPS -->
 
 <div class="tt" id="tt-majo">
-  <div class="tt-head" style="background:var(--majo)">
+  <div class="tt-head" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">
     <span>① 魔女の谷</span>
     <button class="tt-close" onclick="closeTT('majo')">✕</button>
   </div>
@@ -640,7 +621,7 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
 </div>
 
 <div class="tt" id="tt-souko">
-  <div class="tt-head" style="background:var(--souko)">
+  <div class="tt-head" style="background:linear-gradient(135deg,#ea580c,#fb923c)">
     <span>② ジブリの大倉庫</span>
     <button class="tt-close" onclick="closeTT('souko')">✕</button>
   </div>
@@ -658,7 +639,7 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
 </div>
 
 <div class="tt" id="tt-mono">
-  <div class="tt-head" style="background:var(--mono)">
+  <div class="tt-head" style="background:linear-gradient(135deg,#16a34a,#4ade80)">
     <span>③ もののけの里</span>
     <button class="tt-close" onclick="closeTT('mono')">✕</button>
   </div>
@@ -677,7 +658,7 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
 </div>
 
 <div class="tt" id="tt-dondo">
-  <div class="tt-head" style="background:var(--dondo)">
+  <div class="tt-head" style="background:linear-gradient(135deg,#2563eb,#60a5fa)">
     <span>④ どんどこ森</span>
     <button class="tt-close" onclick="closeTT('dondo')">✕</button>
   </div>
@@ -713,25 +694,25 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
       <div class="move-item">
         <div class="move-from" style="background:#475569">🅿 西P</div>
         <div class="move-mid"><div class="move-arrow">→</div><div class="move-info">徒歩 約10〜15分</div></div>
-        <div class="move-to" style="background:var(--majo)">① 魔女の谷</div>
+        <div class="move-to" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">① 魔女の谷</div>
       </div>
       <div class="move-item">
-        <div class="move-from" style="background:var(--majo)">① 魔女の谷</div>
+        <div class="move-from" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">① 魔女の谷</div>
         <div class="move-mid"><div class="move-arrow">→</div><div class="move-info">徒歩 約5分</div></div>
-        <div class="move-to" style="background:var(--souko)">② 大倉庫</div>
+        <div class="move-to" style="background:linear-gradient(135deg,#ea580c,#fb923c)">② 大倉庫</div>
       </div>
       <div class="move-item">
-        <div class="move-from" style="background:var(--souko)">② 大倉庫</div>
+        <div class="move-from" style="background:linear-gradient(135deg,#ea580c,#fb923c)">② 大倉庫</div>
         <div class="move-mid"><div class="move-arrow">→</div><div class="move-info">徒歩 約10分</div></div>
-        <div class="move-to" style="background:var(--mono)">③ もののけ</div>
+        <div class="move-to" style="background:linear-gradient(135deg,#16a34a,#4ade80)">③ もののけ</div>
       </div>
       <div class="move-item">
-        <div class="move-from" style="background:var(--mono)">③ もののけ</div>
+        <div class="move-from" style="background:linear-gradient(135deg,#16a34a,#4ade80)">③ もののけ</div>
         <div class="move-mid"><div class="move-arrow">→</div><div class="move-info">🐱ネコバス 約10分</div></div>
-        <div class="move-to" style="background:var(--dondo)">④ どんどこ森</div>
+        <div class="move-to" style="background:linear-gradient(135deg,#2563eb,#60a5fa)">④ どんどこ森</div>
       </div>
       <div class="move-item">
-        <div class="move-from" style="background:var(--dondo)">④ どんどこ森</div>
+        <div class="move-from" style="background:linear-gradient(135deg,#2563eb,#60a5fa)">④ どんどこ森</div>
         <div class="move-mid"><div class="move-arrow">→</div><div class="move-info">徒歩 約20分</div></div>
         <div class="move-to" style="background:#475569">🅿 西P</div>
       </div>
@@ -740,15 +721,15 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
 </div>
 
 <div class="card">
-  <div class="card-head" style="background:linear-gradient(90deg,#1e40af,#1d4ed8)">
+  <div class="card-head" style="background:linear-gradient(90deg,#1e40af,#2563eb)">
     <span>📍</span><span>各エリア内 詳細スポット</span>
   </div>
   <div class="card-body">
     <div class="area-cards">
       <div class="acard">
-        <div class="acard-head" style="background:var(--majo)">① 魔女の谷（2時間40分）</div>
-        <div class="acard-body">
-          <span class="acard-stay" style="background:var(--majo)">10:00〜12:40</span>
+        <div class="acard-head" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">① 魔女の谷（2時間40分）</div>
+        <div class="acard-body" style="background:#2d1a5a;color:#e8d8ff">
+          <span class="acard-stay" style="background:linear-gradient(90deg,#7c3aed,#a78bfa)">10:00〜12:40</span>
           <ul>
             <li><strong>魔女の口</strong>（入口・無料エリア）</li>
             <li><strong>小さな小屋</strong> ⭐整理券・当日券確保</li>
@@ -765,9 +746,9 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
         </div>
       </div>
       <div class="acard">
-        <div class="acard-head" style="background:var(--souko)">② ジブリの大倉庫（2h15m）</div>
-        <div class="acard-body">
-          <span class="acard-stay" style="background:var(--souko)">13:00〜15:15</span>
+        <div class="acard-head" style="background:linear-gradient(135deg,#ea580c,#fb923c)">② ジブリの大倉庫（2h15m）</div>
+        <div class="acard-body" style="background:#3a1800;color:#ffe0c8">
+          <span class="acard-stay" style="background:linear-gradient(90deg,#ea580c,#fb923c)">13:00〜15:15</span>
           <ul>
             <li><strong>冒険飛行団</strong>🛒 入場直後にお土産購入</li>
             <li><strong>中央展示室</strong> 13作品の展示物</li>
@@ -777,13 +758,13 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
             <li><strong>カフェ 大陸横断飛行</strong>☕ 休憩</li>
             <li><strong>ミルクスタンド シベリ❆あん</strong></li>
           </ul>
-          <div style="font-size:10px;color:#e74c3c;margin-top:6px;font-weight:700">⚠️ 再入場不可 / 入場前トイレ必須</div>
+          <div style="font-size:10px;color:#ff8080;margin-top:6px;font-weight:700">⚠️ 再入場不可 / 入場前トイレ必須</div>
         </div>
       </div>
       <div class="acard">
-        <div class="acard-head" style="background:var(--mono)">③ もののけの里（40分）</div>
-        <div class="acard-body">
-          <span class="acard-stay" style="background:var(--mono)">15:25〜16:05</span>
+        <div class="acard-head" style="background:linear-gradient(135deg,#16a34a,#4ade80)">③ もののけの里（40分）</div>
+        <div class="acard-body" style="background:#0a2010;color:#c8f0d0">
+          <span class="acard-stay" style="background:linear-gradient(90deg,#16a34a,#4ade80)">15:25〜16:05</span>
           <ul>
             <li><strong>タタリ神</strong>🐗 巨大オブジェ（撮影）</li>
             <li><strong>乙事主</strong>🦌 巨大イノシシ像・滑り台</li>
@@ -792,13 +773,13 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
             <li><strong>ネコバス券売機</strong>⭐ 16:05に16:15枠を購入</li>
             <li><strong>ネコバス乗り場</strong>🐱 猫の城遊具横</li>
           </ul>
-          <div style="font-size:10px;color:#15803d;margin-top:6px;font-weight:700">✅ 五平餅体験は5/14実施中（1,200円/人）</div>
+          <div style="font-size:10px;color:#4ade80;margin-top:6px;font-weight:700">✅ 五平餅体験は5/14実施中（1,200円/人）</div>
         </div>
       </div>
       <div class="acard">
-        <div class="acard-head" style="background:var(--dondo)">④ どんどこ森（45分）</div>
-        <div class="acard-body">
-          <span class="acard-stay" style="background:var(--dondo)">16:15〜17:00</span>
+        <div class="acard-head" style="background:linear-gradient(135deg,#2563eb,#60a5fa)">④ どんどこ森（45分）</div>
+        <div class="acard-body" style="background:#0a1840;color:#c0d8ff">
+          <span class="acard-stay" style="background:linear-gradient(90deg,#2563eb,#60a5fa)">16:15〜17:00</span>
           <ul>
             <li><strong>ネコバス降車</strong>🐱 どんどこ処そば</li>
             <li><strong>サツキとメイの家</strong>🏠 内部観覧</li>
@@ -807,7 +788,7 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
             <li><strong>裏庭・どんどこ堂</strong> 森の展示</li>
             <li><strong>森の小道</strong>🌿 自然光・写真スポット</li>
           </ul>
-          <div style="font-size:10px;color:#1d4ed8;margin-top:6px;font-weight:700">✅ 最終入場16:30 / ネコバス16:25着で余裕あり</div>
+          <div style="font-size:10px;color:#93bbf7;margin-top:6px;font-weight:700">✅ 最終入場16:30 / ネコバス16:25着で余裕あり</div>
         </div>
       </div>
     </div>
@@ -815,34 +796,34 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
 </div>
 
 <div class="card">
-  <div class="card-head" style="background:linear-gradient(90deg,var(--forest),var(--forest2))">
+  <div class="card-head" style="background:linear-gradient(135deg,#2d5a27,#4a7c3f,#5a9c4f)">
     <span>🕐</span><span>完全タイムスケジュール</span>
   </div>
   <div class="card-body">
     <div class="sch-row"><div class="sch-time">09:30</div><div class="sch-content"><span class="sch-badge" style="background:#475569">🅿 移動</span>西駐車場 到着・駐車（500円）</div></div>
     <div class="sch-row"><div class="sch-time">09:40</div><div class="sch-content"><span class="sch-badge" style="background:#475569">🅿 移動</span>西口ゲート→魔女の谷入口 徒歩約10〜15分・待機列に並ぶ</div></div>
-    <div class="sch-row"><div class="sch-time">10:00</div><div class="sch-content"><span class="sch-badge" style="background:var(--majo)">① 魔女の谷</span>開園・入場</div></div>
+    <div class="sch-row"><div class="sch-time">10:00</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#7c3aed,#9d5bfa)">① 魔女の谷</span>開園・入場</div></div>
     <div class="sch-row"><div class="sch-time">10:05</div><div class="sch-content"><span class="sch-badge" style="background:#ef4444">⭐最優先</span>ハウルの城 整理券 2人分取得（小さな小屋へ直行）</div></div>
     <div class="sch-row"><div class="sch-time">10:30</div><div class="sch-content"><span class="sch-badge" style="background:#ef4444">⭐最優先</span>魔女の家 当日入場券 購入（400円×2）</div></div>
-    <div class="sch-row"><div class="sch-time">10:30</div><div class="sch-content"><span class="sch-badge" style="background:var(--majo)">① 魔女の谷</span>グーチョキパン屋 並ぶ（10:30開店）・噴水広場・廃墟通り散策</div></div>
+    <div class="sch-row"><div class="sch-time">10:30</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#7c3aed,#9d5bfa)">① 魔女の谷</span>グーチョキパン屋 並ぶ（10:30開店）・噴水広場・廃墟通り散策</div></div>
     <div class="sch-row"><div class="sch-time">10:45</div><div class="sch-content"><span class="sch-badge" style="background:#d97706">🍽 食事</span>空飛ぶオーブン前に並ぶ（1巡目確保）</div></div>
     <div class="sch-row"><div class="sch-time">11:00</div><div class="sch-content"><span class="sch-badge" style="background:#d97706">🍽 食事</span>ランチ「空飛ぶオーブン」（〜12:00）</div></div>
-    <div class="sch-row"><div class="sch-time">12:00</div><div class="sch-content"><span class="sch-badge" style="background:var(--majo)">① 魔女の谷</span>🧙 魔女の家 内部観覧（〜12:40）</div></div>
-    <div class="sch-row"><div class="sch-time">12:40</div><div class="sch-content"><span class="sch-badge" style="background:var(--majo)">① 魔女の谷</span>🏰 ハウルの城 内部観覧（整理券指定時刻）</div></div>
-    <div class="sch-row"><div class="sch-time">12:40</div><div class="sch-content"><span class="sch-badge" style="background:var(--majo)">① 魔女の谷</span>13人の魔女団ショップ お土産購入→退出（最後のチャンス！）</div></div>
+    <div class="sch-row"><div class="sch-time">12:00</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#7c3aed,#9d5bfa)">① 魔女の谷</span>🧙 魔女の家 内部観覧（〜12:40）</div></div>
+    <div class="sch-row"><div class="sch-time">12:40</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#7c3aed,#9d5bfa)">① 魔女の谷</span>🏰 ハウルの城 内部観覧（整理券指定時刻）</div></div>
+    <div class="sch-row"><div class="sch-time">12:40</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#7c3aed,#9d5bfa)">① 魔女の谷</span>13人の魔女団ショップ お土産購入→退出（最後のチャンス！）</div></div>
     <div class="sch-row"><div class="sch-time">12:45</div><div class="sch-content"><span class="sch-badge" style="background:#475569">🚶 移動</span>魔女の谷 → 大倉庫 徒歩約5分</div></div>
-    <div class="sch-row"><div class="sch-time">13:00</div><div class="sch-content"><span class="sch-badge" style="background:var(--souko)">② 大倉庫</span>🏛 入場（14:00枠・13:00〜14:00の間に入場でOK）<br><span style="font-size:10px;color:#e74c3c">⚠️ 再入場不可 — 入場前にトイレ・水分・荷物確認</span></div></div>
-    <div class="sch-row"><div class="sch-time">13:05</div><div class="sch-content"><span class="sch-badge" style="background:var(--souko)">② 大倉庫</span>🛒 冒険飛行団 お土産優先購入</div></div>
-    <div class="sch-row"><div class="sch-time">13:45</div><div class="sch-content"><span class="sch-badge" style="background:var(--souko)">② 大倉庫</span>🖼 展示室・なりきり名場面展（カオナシ・ネコバス・ラピュタ等）</div></div>
-    <div class="sch-row"><div class="sch-time">14:30頃</div><div class="sch-content"><span class="sch-badge" style="background:var(--souko)">② 大倉庫</span>🎬 短編アニメ「毛虫のボロ」上映 ※入場後スタッフに時刻確認</div></div>
-    <div class="sch-row"><div class="sch-time">15:00</div><div class="sch-content"><span class="sch-badge" style="background:var(--souko)">② 大倉庫</span>2F 公開倉庫・カフェ大陸横断飛行で休憩</div></div>
-    <div class="sch-row"><div class="sch-time">15:15</div><div class="sch-content"><span class="sch-badge" style="background:var(--souko)">② 大倉庫</span>退出</div></div>
+    <div class="sch-row"><div class="sch-time">13:00</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#ea580c,#f97316)">② 大倉庫</span>🏛 入場（14:00枠・13:00〜14:00の間に入場でOK）<br><span style="font-size:10px;color:#ff8080">⚠️ 再入場不可 — 入場前にトイレ・水分・荷物確認</span></div></div>
+    <div class="sch-row"><div class="sch-time">13:05</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#ea580c,#f97316)">② 大倉庫</span>🛒 冒険飛行団 お土産優先購入</div></div>
+    <div class="sch-row"><div class="sch-time">13:45</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#ea580c,#f97316)">② 大倉庫</span>🖼 展示室・なりきり名場面展（カオナシ・ネコバス・ラピュタ等）</div></div>
+    <div class="sch-row"><div class="sch-time">14:30頃</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#ea580c,#f97316)">② 大倉庫</span>🎬 短編アニメ「毛虫のボロ」上映 ※入場後スタッフに時刻確認</div></div>
+    <div class="sch-row"><div class="sch-time">15:00</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#ea580c,#f97316)">② 大倉庫</span>2F 公開倉庫・カフェ大陸横断飛行で休憩</div></div>
+    <div class="sch-row"><div class="sch-time">15:15</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#ea580c,#f97316)">② 大倉庫</span>退出</div></div>
     <div class="sch-row"><div class="sch-time">15:15</div><div class="sch-content"><span class="sch-badge" style="background:#475569">🚶 移動</span>大倉庫 → もののけの里 徒歩約10分</div></div>
-    <div class="sch-row"><div class="sch-time">15:25</div><div class="sch-content"><span class="sch-badge" style="background:var(--mono)">③ もののけ</span>🐗 入場・タタリ神・乙事主・炭焼き小屋 観覧</div></div>
+    <div class="sch-row"><div class="sch-time">15:25</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#16a34a,#22c55e)">③ もののけ</span>🐗 入場・タタリ神・乙事主・炭焼き小屋 観覧</div></div>
     <div class="sch-row"><div class="sch-time">16:05</div><div class="sch-content"><span class="sch-badge" style="background:#ef4444">⭐ 購入</span>ネコバス券購入（16:15枠・1,000円×2）→乗り場へ移動</div></div>
     <div class="sch-row"><div class="sch-time">16:15</div><div class="sch-content"><span class="sch-badge" style="background:#0ea5e9">🐱 ネコバス</span>APMネコバス乗車（森の中 片道約10分）</div></div>
-    <div class="sch-row"><div class="sch-time">16:25</div><div class="sch-content"><span class="sch-badge" style="background:var(--dondo)">④ どんどこ森</span>🌳 到着・入場（最終16:30の5分前 ✅）</div></div>
-    <div class="sch-row"><div class="sch-time">16:20</div><div class="sch-content"><span class="sch-badge" style="background:var(--dondo)">④ どんどこ森</span>🏠 サツキとメイの家 内部観覧・裏庭・森の小道（〜17:00）</div></div>
+    <div class="sch-row"><div class="sch-time">16:25</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#2563eb,#3b82f6)">④ どんどこ森</span>🌳 到着・入場（最終16:30の5分前 ✅）</div></div>
+    <div class="sch-row"><div class="sch-time">16:20</div><div class="sch-content"><span class="sch-badge" style="background:linear-gradient(90deg,#2563eb,#3b82f6)">④ どんどこ森</span>🏠 サツキとメイの家 内部観覧・裏庭・森の小道（〜17:00）</div></div>
     <div class="sch-row"><div class="sch-time">17:00</div><div class="sch-content"><span class="sch-badge" style="background:#475569">🚶 退場</span>全エリア閉園 → 西駐車場へ徒歩約20分</div></div>
     <div class="sch-row" style="border-bottom:none"><div class="sch-time">17:20</div><div class="sch-content"><span class="sch-badge" style="background:#475569">🅿 到着</span>西駐車場 到着（精算500円）</div></div>
     <div class="note-box">
@@ -861,26 +842,21 @@ fill="none" stroke-dasharray="4,4" marker-end="url(#apark)" opacity="0.6"/>
     <span>🎫</span><span>チケット・費用まとめ（2人分）</span>
   </div>
   <div class="card-body">
-    <table style="width:100%;font-size:12px;border-collapse:collapse">
-      <tr style="background:#fef9f0">
-        <th style="text-align:left;padding:6px 8px;border-bottom:1px solid #f0e0c0;font-size:11px;color:#444">チケット</th>
-        <th style="text-align:right;padding:6px 8px;border-bottom:1px solid #f0e0c0;font-size:11px;color:#444">購入方法</th>
-        <th style="text-align:right;padding:6px 8px;border-bottom:1px solid #f0e0c0;font-size:11px;color:#444">2人合計</th>
+    <table style="width:100%;font-size:12px;border-collapse:collapse;color:#ccc">
+      <tr style="background:#2a2820;">
+        <th style="text-align:left;padding:6px 8px;border-bottom:1px solid #333;font-size:11px;color:#bbb">チケット</th>
+        <th style="text-align:right;padding:6px 8px;border-bottom:1px solid #333;font-size:11px;color:#bbb">購入方法</th>
+        <th style="text-align:right;padding:6px 8px;border-bottom:1px solid #333;font-size:11px;color:#bbb">2人合計</th>
       </tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid #f5f0e8">大さんぽ券スタンダード（平日）</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;color:#444;font-size:11px">Boo-Woo事前</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;font-weight:700">6,600円</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid #f5f0e8">どんどこ森エリア券（午後券）</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;color:#444;font-size:11px">Boo-Woo事前</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;font-weight:700">2,000円</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid #f5f0e8">ハウルの城 当日入場券</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;color:#444;font-size:11px">当日・魔女の谷内</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;font-weight:700">2,000円</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid #f5f0e8">魔女の家 当日入場券</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;color:#444;font-size:11px">当日・魔女の谷内</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;font-weight:700">800円</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid #f5f0e8">APMネコバス（片道）</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;color:#444;font-size:11px">当日・もののけ</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;font-weight:700">2,000円</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid #f5f0e8">西駐車場</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;color:#444;font-size:11px">当日精算</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #f5f0e8;font-weight:700">500円</td></tr>
-      <tr style="background:#fef9f0"><td style="padding:6px 8px;font-weight:700" colspan="2">合計</td><td style="text-align:right;padding:6px 8px;font-weight:700;font-size:14px;color:var(--souko)">13,900円</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid #2e2c28">大さんぽ券スタンダード（平日）</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;color:#ccc;font-size:11px">Boo-Woo事前</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;font-weight:700">6,600円</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid #2e2c28">どんどこ森エリア券（午後券）</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;color:#ccc;font-size:11px">Boo-Woo事前</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;font-weight:700">2,000円</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid #2e2c28">ハウルの城 当日入場券</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;color:#ccc;font-size:11px">当日・魔女の谷内</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;font-weight:700">2,000円</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid #2e2c28">魔女の家 当日入場券</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;color:#ccc;font-size:11px">当日・魔女の谷内</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;font-weight:700">800円</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid #2e2c28">APMネコバス（片道）</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;color:#ccc;font-size:11px">当日・もののけ</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;font-weight:700">2,000円</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid #2e2c28">西駐車場</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;color:#ccc;font-size:11px">当日精算</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #2e2c28;font-weight:700">500円</td></tr>
+      <tr style="background:#2a2820;"><td style="padding:6px 8px;font-weight:700" colspan="2">合計</td><td style="text-align:right;padding:6px 8px;font-weight:700;font-size:14px;color:var(--souko2)">13,900円</td></tr>
     </table>
   </div>
-</div>
-
-<div class="footer">
-  ベースマップ：ジブリパーク公式配布マップ / 移動時間：gjourney.com 移動時間図 / 各エリア情報：ghibli-park.jp公式
-</div>
 
 <script>
 function showTT(id, e) {
@@ -915,31 +891,21 @@ document.addEventListener('click', function(e) {
 });
 </script>
 
+<div class="cards" style="margin-top:28px;">
+  <div class="card">
+    <div class="card-title">ジブリパーク</div>
+    <div class="card-body">愛知県長久手市茨ヶ廻間乙1533-1<br>平日 <strong>10:00〜17:00</strong><br><a href="https://ghibli-park.jp" target="_blank" style="color:#93bbf7;">公式サイト →</a></div>
+  </div>
+  <div class="card">
+    <div class="card-title">新和食 ひとはし</div>
+    <div class="card-body">名古屋市中村区（名古屋駅徒歩3分）<br>17:00〜23:00 定休なし 完全個室<br><a href="https://tabelog.com/aichi/A2301/A230101/23038379/" target="_blank" style="color:#93bbf7;">食べログ →</a></div>
+  </div>
+  <div class="card">
+    <div class="card-title">ANA Crowne Plaza Grand Court</div>
+    <div class="card-body">名古屋市中区金山町1-1-1<br>金山駅 徒歩1分<br>朝食 平日 6:30〜<br><a href="https://www.anacrowneplaza-nagoya.jp" target="_blank" style="color:#93bbf7;">公式サイト →</a></div>
+  </div>
 </div>
 
-  <div class="ghibli-sch-row">
-    <div class="ghibli-sch-time">10:00</div>
-    <div><span class="ghibli-badge" style="background:#7c3aed">① 魔女の谷</span>オキノ邸、ハウルの城、魔女の家など。</div>
-  </div>
-  <div class="ghibli-sch-row">
-    <div class="ghibli-sch-time">13:00</div>
-    <div><span class="ghibli-badge" style="background:#c2410c">② 大倉庫</span>映像展示室オリヲン座、なりきり名場面展。</div>
-  </div>
-  <div class="ghibli-sch-row">
-    <div class="ghibli-sch-time">15:25</div>
-    <div><span class="ghibli-badge" style="background:#15803d">③ もののけの里</span>タタリ神、乙事主のオブジェ見学。</div>
-  </div>
-  <div class="ghibli-sch-row">
-    <div class="ghibli-sch-time">16:15</div>
-    <div><span class="ghibli-badge" style="background:#1d4ed8">④ どんどこ森</span>サツキとメイの家、どんどこ堂。</div>
-  </div>
-  <p style="font-size: 11px; color: var(--muted); margin-top: 10px;">※大さんぽ券スタンダード利用。ネコバス移動あり。</p>
-
-  <div class="cards">
-    <div class="card"><div class="card-title">ジブリパーク</div><div class="card-body">愛知県長久手市茨ヶ廻間乙1533-1<br>平日 <strong>10:00〜17:00</strong><br><a href="https://ghibli-park.jp" target="_blank">公式サイト →</a></div></div>
-    <div class="card"><div class="card-title">新和食 ひとはし</div><div class="card-body">名古屋市中村区（名古屋駅徒歩3分）<br>17:00〜23:00 定休なし 完全個室<br><a href="https://tabelog.com/aichi/A2301/A230101/23038379/" target="_blank">食べログ →</a></div></div>
-    <div class="card"><div class="card-title">ANA Crowne Plaza Grand Court</div><div class="card-body">名古屋市中区金山町1-1-1<br>金山駅 徒歩1分<br>朝食 平日 6:30〜<br><a href="https://www.anacrowneplaza-nagoya.jp" target="_blank">公式サイト →</a></div></div>
-  </div>
 </section>
 
 <!-- DAY 2 -->
@@ -950,8 +916,7 @@ document.addEventListener('click', function(e) {
     <span class="day-tag">May 15, Thursday — Day Two</span>
     <h2 class="day-title-text"><em>ひつまぶし</em> →<br>名古屋港水族館</h2>
   </div>
-  名古屋城を3日目に移動したことで<strong>水族館の滞在が3時間10分</strong>に拡大。シャチ・イルカショーを両方ゆっくり楽しめます。
-  </div>
+  <p style="color:#ccc;font-size:12px;line-height:1.8;margin:12px 0 20px;">名古屋城を3日目に移動したことで<strong style="color:#eee;">水族館の滞在が3時間10分</strong>に拡大。シャチ・イルカショーを両方ゆっくり楽しめます。</p>
   <div class="timeline">
     <div class="tl-item">
       <div class="tl-time">07:30</div>
@@ -994,17 +959,76 @@ document.addEventListener('click', function(e) {
       <div class="tl-body"><div class="tl-cat cat-hotel">就寝</div><div class="tl-name">ホテル 就寝</div></div>
     </div>
   </div>
-  <div class="map-wrap">
-    <div class="map-head"><span>📍 Day 2 ルートマップ</span><span>ホテル → 蓬莱軒（熱田）→ 水族館（名古屋港）</span></div>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&origin=place_id:ChIJK6iqQlJ3A2ARQfVkGj06ljk&destination=place_id:ChIJsyTJ06B5A2ARvt6FJ9xiqaE&waypoints=place_id:ChIJJRIRWR96A2AR1pCxwc4H298&mode=driving&language=ja" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="map-legend">
-      <div class="leg-item"><div class="leg-dot" style="background:#7a5500"></div>ホテル（金山）</div>
-      <div class="leg-item"><div class="leg-dot" style="background:#c4442e"></div>あつた蓬莱軒 本店</div>
-      <div class="leg-item"><div class="leg-dot" style="background:#2e5fa8"></div>名古屋港水族館</div>
-    </div>
+  <div class="map-wrap route-map-wrap">
+  <div class="map-head">
+    <span>📍 Day 2 移動ルート</span>
+    <span style="font-size:10px;opacity:.7">金山ホテル → 蓬莱軒 → 熱田神宮 → 名古屋港水族館</span>
   </div>
+  <div class="route-map" style="padding:16px 12px 0;background:#161412;overflow-x:auto;">
+  <svg viewBox="0 0 1430 270" style="width:100%;min-width:480px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+    <defs><marker id="arr5" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4z" fill="#ea580c"/></marker></defs>
+
+```
+<circle cx="95" cy="130" r="55" fill="#4a1d96" stroke="#a78bfa" stroke-width="3"/>
+<text x="95" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">金山</text>
+<text x="95" y="140" text-anchor="middle" font-size="12" fill="#eee">09:00 出発</text>
+<text x="95" y="46" text-anchor="middle" font-size="11" fill="#a78bfa">ホテル出発</text>
+<text x="95" y="244" text-anchor="middle" font-size="11" fill="#999">ANA Crowne Plaza</text>
+<circle cx="405" cy="130" r="55" fill="#7a2020" stroke="#f87171" stroke-width="3"/>
+<text x="405" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">あつた</text>
+<text x="405" y="140" text-anchor="middle" font-size="12" fill="#eee">蓬莱軒</text>
+<text x="405" y="46" text-anchor="middle" font-size="11" fill="#f87171">ひつまぶし</text>
+<text x="405" y="60" text-anchor="middle" font-size="11" fill="#f87171">11:00〜13:00</text>
+<text x="405" y="244" text-anchor="middle" font-size="11" fill="#999">熱田区 神戸町</text>
+<circle cx="715" cy="130" r="55" fill="#5c4a00" stroke="#fcd34d" stroke-width="3"/>
+<text x="715" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">熱田神宮</text>
+<text x="715" y="140" text-anchor="middle" font-size="12" fill="#eee">13:00〜14:00</text>
+<text x="715" y="46" text-anchor="middle" font-size="11" fill="#fcd34d">参拝</text>
+<text x="715" y="244" text-anchor="middle" font-size="11" fill="#999">蓬莱軒から 徒歩圏</text>
+<circle cx="1025" cy="130" r="55" fill="#1e3d6e" stroke="#60a5fa" stroke-width="3"/>
+<text x="1025" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">名古屋港</text>
+<text x="1025" y="140" text-anchor="middle" font-size="12" fill="#eee">水族館</text>
+<text x="1025" y="46" text-anchor="middle" font-size="11" fill="#60a5fa">14:30〜17:00</text>
+<text x="1025" y="244" text-anchor="middle" font-size="11" fill="#999">シャチ・イルカ</text>
+<circle cx="1335" cy="130" r="55" fill="#4a1d96" stroke="#a78bfa" stroke-width="3"/>
+<text x="1335" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">金山</text>
+<text x="1335" y="140" text-anchor="middle" font-size="12" fill="#eee">17:30 帰着</text>
+<text x="1335" y="46" text-anchor="middle" font-size="11" fill="#a78bfa">ホテル帰着</text>
+<text x="1335" y="244" text-anchor="middle" font-size="11" fill="#999">ANA Crowne Plaza</text>
+
+<line x1="154" y1="130" x2="342" y2="130" stroke="#ea580c" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr5)"/>
+<rect x="198" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#ea580c" stroke-width="1.5"/>
+<text x="248" y="125" text-anchor="middle" font-size="13" fill="#ea580c" font-weight="700">🚗 約10分</text>
+<text x="248" y="143" text-anchor="middle" font-size="11" fill="#bbb">約3.3km</text>
+<line x1="464" y1="130" x2="652" y2="130" stroke="#ea580c" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr5)"/>
+<rect x="508" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#ea580c" stroke-width="1.5"/>
+<text x="558" y="125" text-anchor="middle" font-size="13" fill="#ea580c" font-weight="700">🚶 約5分</text>
+<text x="558" y="143" text-anchor="middle" font-size="11" fill="#bbb">約500m</text>
+<line x1="774" y1="130" x2="962" y2="130" stroke="#ea580c" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr5)"/>
+<rect x="818" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#ea580c" stroke-width="1.5"/>
+<text x="868" y="125" text-anchor="middle" font-size="13" fill="#ea580c" font-weight="700">🚗 約15分</text>
+<text x="868" y="143" text-anchor="middle" font-size="11" fill="#bbb">約5km</text>
+<line x1="1084" y1="130" x2="1272" y2="130" stroke="#ea580c" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr5)"/>
+<rect x="1128" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#ea580c" stroke-width="1.5"/>
+<text x="1178" y="125" text-anchor="middle" font-size="13" fill="#ea580c" font-weight="700">🚗 約20分</text>
+<text x="1178" y="143" text-anchor="middle" font-size="11" fill="#bbb">約7km</text>
+```
+
+  </svg>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px 20px;background:#161412;border-top:1px solid #2a2820;margin-top:2px;">
+    <a href="https://www.google.com/maps/dir/ANA+Crowne+Plaza+Grand+Court+Nagoya,名古屋市中区金山町1-1-1/あつた蓬莱軒+本店,愛知県名古屋市熱田区/@35.143,136.898,14z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#5a1800;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 ホテル → 蓬莱軒</a>
+    <a href="https://www.google.com/maps/dir/あつた蓬莱軒+本店,愛知県名古屋市熱田区/熱田神宮,愛知県名古屋市熱田区神宮1丁目/@35.128,136.909,15z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#3a2800;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 蓬莱軒 → 熱田神宮</a>
+    <a href="https://www.google.com/maps/dir/熱田神宮,愛知県名古屋市熱田区神宮1丁目/名古屋港水族館/@35.110,136.893,13z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#0e2038;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 熱田神宮 → 水族館</a>
+    <a href="https://www.google.com/maps/dir/名古屋港水族館/ANA+Crowne+Plaza+Grand+Court+Nagoya,名古屋市中区金山町1-1-1/@35.127,136.888,13z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#2a1560;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 水族館 → ホテル</a>
+</div>
+  <div class="map-legend" style="background:#1e1c19;border-top:1px solid #333;">
+    <div class="leg-item"><div class="leg-dot" style="background:#7a2020"></div><span>食事</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#5c4a00"></div><span>観光</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#1e3d6e"></div><span>水族館</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#8a6d2f"></div><span>レンタカー移動</span></div>
+  </div>
+</div>
   <div class="cards">
     <div class="card"><div class="card-title">あつた蓬莱軒 本店</div><div class="card-body">名古屋市熱田区神戸町503<br>昼の部 <strong>11:00〜14:30</strong><br>駐車場40台<br><a href="http://www.houraiken.com/honten/" target="_blank">公式サイト →</a></div></div>
     <div class="card"><div class="card-title">名古屋港水族館</div><div class="card-body">名古屋市港区港町1-3<br>通常期 <strong>9:30〜17:30</strong>（入館16:30）<br>入館料 大人2,030円<br><a href="https://nagoyaaqua.jp" target="_blank">公式サイト →</a></div></div>
@@ -1086,18 +1110,84 @@ document.addEventListener('click', function(e) {
       <div class="tl-body"><div class="tl-cat cat-move">帰着</div><div class="tl-name">品川駅 到着 → 立会川駅 帰着</div><div class="tl-desc">品川→京急→立会川。23:30頃帰着。</div></div>
     </div>
   </div>
-  <div class="map-wrap">
-    <div class="map-head"><span>📍 Day 3 ルートマップ（名古屋市内）</span><span>名古屋城 → 大須 → MIRAI TOWER → とん八 → 名古屋駅</span></div>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&origin=place_id:ChIJ7cv00DwsDogRAMDACa2m4K8&destination=place_id:ChIJ7cv00DwsDogRAMDACa2m4K8&waypoints=place_id:ChIJm3_Y8YJ3A2ARUu5682HqfLw|place_id:ChIJ_208-Yl3A2AR2pE_3Wq6Rz8|place_id:ChIJs6pD7Lh3A2AR5_2m38666_0|place_id:ChIJ-57757Z2A2AR0Z_46_0_0_0&mode=driving&language=ja" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="map-legend">
-      <div class="leg-item"><div class="leg-dot" style="background:#2e5fa8"></div>名古屋城</div>
-      <div class="leg-item"><div class="leg-dot" style="background:#2d5c3e"></div>大須商店街</div>
-      <div class="leg-item"><div class="leg-dot" style="background:#c4a24a"></div>MIRAI TOWER</div>
-      <div class="leg-item"><div class="leg-dot" style="background:#c4442e"></div>とん八（鶴舞）</div>
-    </div>
+  <div class="map-wrap route-map-wrap">
+  <div class="map-head">
+    <span>📍 Day 3 移動ルート</span>
+    <span style="font-size:10px;opacity:.7">名古屋城 → 大須 → MIRAI TOWER → とん八 → 名古屋駅</span>
   </div>
+  <div class="route-map" style="padding:16px 12px 0;background:#161412;overflow-x:auto;">
+  <svg viewBox="0 0 1740 270" style="width:100%;min-width:480px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+    <defs><marker id="arr6" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L0,8 L10,4z" fill="#7c3aed"/></marker></defs>
+
+```
+<circle cx="95" cy="130" r="55" fill="#4a1d96" stroke="#a78bfa" stroke-width="3"/>
+<text x="95" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">金山</text>
+<text x="95" y="140" text-anchor="middle" font-size="12" fill="#eee">09:00 出発</text>
+<text x="95" y="46" text-anchor="middle" font-size="11" fill="#a78bfa">ホテル出発</text>
+<circle cx="405" cy="130" r="55" fill="#5c4a00" stroke="#fcd34d" stroke-width="3"/>
+<text x="405" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">名古屋城</text>
+<text x="405" y="140" text-anchor="middle" font-size="12" fill="#eee">09:30〜11:30</text>
+<text x="405" y="46" text-anchor="middle" font-size="11" fill="#fcd34d">天守閣・本丸御殿</text>
+<text x="405" y="244" text-anchor="middle" font-size="11" fill="#999">2時間たっぷり</text>
+<circle cx="715" cy="130" r="55" fill="#7a2020" stroke="#f87171" stroke-width="3"/>
+<text x="715" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">大須</text>
+<text x="715" y="140" text-anchor="middle" font-size="12" fill="#eee">12:00〜15:30</text>
+<text x="715" y="46" text-anchor="middle" font-size="11" fill="#f87171">ショッピング・食事</text>
+<text x="715" y="244" text-anchor="middle" font-size="11" fill="#999">3.5時間</text>
+<circle cx="1025" cy="130" r="55" fill="#1e3d6e" stroke="#60a5fa" stroke-width="3"/>
+<text x="1025" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">MIRAI</text>
+<text x="1025" y="140" text-anchor="middle" font-size="12" fill="#eee">TOWER</text>
+<text x="1025" y="46" text-anchor="middle" font-size="11" fill="#60a5fa">17:30〜20:00</text>
+<text x="1025" y="244" text-anchor="middle" font-size="11" fill="#999">夜景ディナー</text>
+<circle cx="1335" cy="130" r="55" fill="#7a2020" stroke="#f87171" stroke-width="3"/>
+<text x="1335" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">とん八</text>
+<text x="1335" y="140" text-anchor="middle" font-size="12" fill="#eee">20:00〜</text>
+<text x="1335" y="46" text-anchor="middle" font-size="11" fill="#f87171">味噌カツ</text>
+<text x="1335" y="244" text-anchor="middle" font-size="11" fill="#999">鶴舞駅近</text>
+<circle cx="1645" cy="130" r="55" fill="#1e3a6e" stroke="#60a5fa" stroke-width="3"/>
+<text x="1645" y="122" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">名古屋駅</text>
+<text x="1645" y="140" text-anchor="middle" font-size="12" fill="#eee">21:47 発</text>
+<text x="1645" y="46" text-anchor="middle" font-size="11" fill="#60a5fa">のぞみ→品川23:16</text>
+<text x="1645" y="244" text-anchor="middle" font-size="11" fill="#999">🚄 帰路</text>
+
+<line x1="154" y1="130" x2="342" y2="130" stroke="#7c3aed" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr6)"/>
+<rect x="198" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="248" y="125" text-anchor="middle" font-size="13" fill="#7c3aed" font-weight="700">🚗 約15分</text>
+<text x="248" y="143" text-anchor="middle" font-size="11" fill="#bbb">約3.5km</text>
+<line x1="464" y1="130" x2="652" y2="130" stroke="#7c3aed" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr6)"/>
+<rect x="508" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="558" y="125" text-anchor="middle" font-size="13" fill="#7c3aed" font-weight="700">🚗 約10分</text>
+<text x="558" y="143" text-anchor="middle" font-size="11" fill="#bbb">約3km</text>
+<line x1="774" y1="130" x2="962" y2="130" stroke="#7c3aed" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr6)"/>
+<rect x="818" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="868" y="125" text-anchor="middle" font-size="13" fill="#7c3aed" font-weight="700">🚶 約18分</text>
+<text x="868" y="143" text-anchor="middle" font-size="11" fill="#bbb">約1.5km</text>
+<line x1="1084" y1="130" x2="1272" y2="130" stroke="#7c3aed" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr6)"/>
+<rect x="1128" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="1178" y="125" text-anchor="middle" font-size="13" fill="#7c3aed" font-weight="700">🚶 約7分</text>
+<text x="1178" y="143" text-anchor="middle" font-size="11" fill="#bbb">約600m</text>
+<line x1="1394" y1="130" x2="1582" y2="130" stroke="#7c3aed" stroke-width="3" stroke-dasharray="9,6" marker-end="url(#arr6)"/>
+<rect x="1438" y="106" width="100" height="44" rx="9" fill="rgba(0,0,0,0.45)" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="1488" y="125" text-anchor="middle" font-size="13" fill="#7c3aed" font-weight="700">🚶 18分</text>
+<text x="1488" y="143" text-anchor="middle" font-size="11" fill="#bbb">or 🚕 5分</text>
+```
+
+  </svg>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px 20px;background:#161412;border-top:1px solid #2a2820;margin-top:2px;">
+    <a href="https://www.google.com/maps/dir/ANA+Crowne+Plaza+Grand+Court+Nagoya,名古屋市中区金山町1-1-1/名古屋城/@35.172,136.896,14z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#2a2000;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 ホテル → 名古屋城</a>
+    <a href="https://www.google.com/maps/dir/名古屋城/大須観音,愛知県名古屋市中区/@35.170,136.898,14z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#4a1010;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 名古屋城 → 大須</a>
+    <a href="https://www.google.com/maps/dir/大須観音,愛知県名古屋市中区/名古屋テレビ塔/@35.163,136.904,15z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#0e1828;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 大須 → MIRAI TOWER</a>
+    <a href="https://www.google.com/maps/dir/名古屋テレビ塔/とんかつとん八鶴舞店/@35.164,136.911,15z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#4a1010;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 MIRAI TOWER → とん八</a>
+    <a href="https://www.google.com/maps/dir/とんかつとん八鶴舞店/名古屋駅/@35.164,136.895,14z" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#0e1e38;color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:600;">🗺 とん八 → 名古屋駅</a>
+</div>
+  <div class="map-legend" style="background:#1e1c19;border-top:1px solid #333;">
+    <div class="leg-item"><div class="leg-dot" style="background:#5c4a00"></div><span>観光スポット</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#7a2020"></div><span>食事・ショッピング</span></div>
+    <div class="leg-item"><div class="leg-dot" style="background:#1e3d6e"></div><span>夜景スポット</span></div>
+    <div class="leg-item" style="margin-left:auto;font-size:10px;color:#aaa;">🚃 帰路: 名古屋21:47 → 品川23:16</div>
+  </div>
+</div>
   <div class="cards">
     <div class="card"><div class="card-title">名古屋城</div><div class="card-body">名古屋市中区本丸1-1<br>9:00〜16:30（入場16:00）<br>入場料 大人<strong>500円</strong><br><a href="https://www.nagoyajo.city.nagoya.jp" target="_blank">公式サイト →</a></div></div>
     <div class="card"><div class="card-title">中部電力 MIRAI TOWER</div><div class="card-body">名古屋市中区錦3-6-15先<br>久屋大通駅4B出口すぐ<br>平日 10:00〜21:00（入場20:40）<br>入場料 大人<strong>1,300円</strong><br><a href="http://www.nagoya-tv-tower.co.jp/" target="_blank">公式サイト →</a></div></div>
@@ -1122,6 +1212,83 @@ function show(id){
   window.scrollTo({top:document.querySelector('.nav').offsetTop,behavior:'smooth'});
 }
 function toggle(el){el.classList.toggle('checked');}
+</script>
+
+<script>
+// Leaflet.js シンプルルートマップ
+// タイル: OpenStreetMap標準（最も信頼性高い・無料）
+
+function makeIcon(color, num) {
+  return L.divIcon({
+    className: '',
+    html: `<div style="background:${color};color:#fff;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;border:2.5px solid rgba(255,255,255,0.8);box-shadow:0 2px 10px rgba(0,0,0,0.5);">${num}</div>`,
+    iconSize:[32,32], iconAnchor:[16,16], popupAnchor:[0,-20]
+  });
+}
+
+function initMap(elId, spots, lineColor) {
+  const el = document.getElementById(elId);
+  if (!el) return;
+
+  const map = L.map(elId, { zoomControl:true, scrollWheelZoom:false });
+
+  // OpenStreetMapタイル（標準・最も安定）
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 19
+  }).addTo(map);
+
+  const latlngs = spots.map(s => s.ll);
+
+  // スポット間を点線で接続
+  L.polyline(latlngs, {
+    color: lineColor, weight: 4, opacity: 0.9, dashArray: '10,7'
+  }).addTo(map);
+
+  // マーカー + ポップアップ（距離・時間を含む）
+  spots.forEach((s, i) => {
+    const moveInfo = s.move
+      ? `<div style="margin-top:5px;padding:3px 7px;background:#f0f0f0;border-radius:5px;font-size:11px;color:#333;">← ${s.move}</div>` : '';
+    const popup = `<div style="min-width:170px;">
+      <b style="font-size:13px;">${s.name}</b><br>
+      <span style="color:#666;font-size:11px;">${s.time}</span>
+      ${moveInfo}
+    </div>`;
+    L.marker(s.ll, { icon: makeIcon(s.color, i+1) })
+     .bindPopup(popup).addTo(map);
+  });
+
+  // 全マーカーが収まるようズーム自動調整
+  const bounds = L.latLngBounds(latlngs);
+  map.fitBounds(bounds, { padding: [40, 40] });
+}
+
+// Day 1: 名古屋駅 → ジブリパーク → ホテル → ひとはし
+initMap('leafletDay1', [
+  { ll:[35.1706,136.8816], name:'① 名古屋駅', time:'08:10着 Times Car受取', color:'#2e5fa8', move:null },
+  { ll:[35.1555,137.0527], name:'② ジブリパーク', time:'10:00〜17:00', color:'#2d7a3f', move:'🚗 車 約50分 / 約38km' },
+  { ll:[35.1583,136.8927], name:'③ ANA Crowne Plaza', time:'18:30着 チェックイン', color:'#4a1d96', move:'🚗 車 約50分 / 約37km' },
+  { ll:[35.1706,136.8820], name:'④ 新和食 ひとはし', time:'19:00〜 夕食', color:'#7a2020', move:'🚶 徒歩 約5分 / 約500m' },
+], '#c4a24a');
+
+// Day 2: ホテル → 蓬莱軒 → 熱田神宮 → 水族館 → ホテル
+initMap('leafletDay2', [
+  { ll:[35.1583,136.8927], name:'① ANA Crowne Plaza', time:'09:00 出発', color:'#4a1d96', move:null },
+  { ll:[35.1267,136.9082], name:'② あつた蓬莱軒本店', time:'11:00〜13:00 ひつまぶし', color:'#7a2020', move:'🚗 車 約10分 / 約3.3km' },
+  { ll:[35.1279,136.9087], name:'③ 熱田神宮', time:'13:00〜14:00 参拝', color:'#5c4a00', move:'🚶 徒歩 約5分 / 約500m' },
+  { ll:[35.0934,136.8826], name:'④ 名古屋港水族館', time:'14:30〜17:00', color:'#1e3d6e', move:'🚗 車 約15分 / 約5km' },
+  { ll:[35.1583,136.8927], name:'⑤ ANA Crowne Plaza', time:'17:30頃 帰着', color:'#4a1d96', move:'🚗 車 約20分 / 約7km' },
+], '#ea580c');
+
+// Day 3: ホテル → 名古屋城 → 大須 → タワー → とん八 → 名古屋駅
+initMap('leafletDay3', [
+  { ll:[35.1583,136.8927], name:'① ANA Crowne Plaza', time:'09:00 出発', color:'#4a1d96', move:null },
+  { ll:[35.1856,136.8996], name:'② 名古屋城', time:'09:30〜11:30 観光', color:'#5c4a00', move:'🚗 車 約15分 / 約3.5km' },
+  { ll:[35.1580,136.9002], name:'③ 大須', time:'12:00〜15:30 ショッピング・食事', color:'#7a2020', move:'🚗 車 約10分 / 約3km' },
+  { ll:[35.1699,136.9065], name:'④ MIRAI TOWER', time:'17:30〜20:00 夜景ディナー', color:'#1e3d6e', move:'🚶 徒歩 約18分 / 約1.5km' },
+  { ll:[35.1594,136.9127], name:'⑤ とん八', time:'20:00〜 味噌カツ', color:'#7a2020', move:'🚶 徒歩 約7分 / 約600m' },
+  { ll:[35.1706,136.8816], name:'⑥ 名古屋駅', time:'21:47発 のぞみ → 品川23:16', color:'#2e5fa8', move:'🚶 徒歩 約18分 or 🚕 タクシー5分' },
+], '#7c3aed');
 </script>
 
 </body>
